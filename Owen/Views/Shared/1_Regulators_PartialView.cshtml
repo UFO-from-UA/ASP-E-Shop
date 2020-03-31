@@ -1,0 +1,35 @@
+﻿@helper AL(string text,string action, string controller , string _CategoryName = "Измерители")
+{
+    @Html.ActionLink(linkText: text, actionName: action, controllerName: controller,
+    routeValues: new { CategoryName = _CategoryName  }, htmlAttributes: null)
+}
+@helper AL_Details(string text, string action, string controller, string _DetailName = "ТРМ201", string imgSource = null, string cost = null, object attr = null)
+{
+    @Html.ActionLink(linkText: text, actionName: action, controllerName: controller,
+    routeValues: new { DetailName = _DetailName }, htmlAttributes: null)
+}
+@*<h3>    @AL("Измерители", "GetProductByCategory", "DB_", "Измерители")</h3>*@
+<h3>    @AL("Измерители", "Category", "Catalog", "Измерители")</h3>
+<ul>
+
+    @*<li>@AL_Details("ТРМ200", "GetProductDetails", "DB_", "ТРМ200")</li>*@
+    <li>@AL_Details("ТРМ200", "Details", "Catalog", "ТРМ200")</li>
+    <li><a class="text-dark" href="#патом">УКТ38</a></li>
+    <li>@AL_Details("2ТРМ0", "Details", "Catalog", "2ТРМ0")</li>
+    <li><a class="text-dark" href="#патом">ИДЦ1</a></li>
+    <li>@AL_Details("ИТП", "Details", "Catalog", "ИТП")</li>
+</ul>
+<h3>    @AL("Регуляторы", "Category", "Catalog", "Регуляторы")    </h3>
+<ul class="list-group">
+    <li><a class="text-dark" href="#патом">ТРМ1</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ201</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ501</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ502</a></li>
+    <li><a class="text-dark" href="#патом">2ТРМ1</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ202</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ138</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ136</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ500</a></li>
+    <li><a class="text-dark" href="#патом">ТРМ138В</a></li>
+</ul>
+

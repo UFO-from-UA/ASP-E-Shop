@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Корзина";
+}
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link href="~/Styles/Basket.css" rel="stylesheet" />
+<div id="Modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="closeModal">&times;</span>
+            <h2>Подтверждение заказа</h2>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <label for="surname">Фамилия <span class="req">*</span></label>
+                <input type="text" name="surname" id="surname" class="txt" tabindex="1" placeholder="Джобс" required autocomplete="on">
+            </div>
+
+            <div class="row">
+                <label for="name">Имя <span class="req">*</span></label>
+                <input type="text" name="name" id="name" class="txt" tabindex="2" placeholder="Стив" required autocomplete="on">
+            </div>
+
+            <div class="row">
+                <label for="secondname">Отчество <span class="req">*</span></label>
+                <input type="text" name="secondname" id="secondname" class="txt" tabindex="3" placeholder="secondname" required autocomplete="on">
+            </div>
+
+            <div class="row">
+                <label for="email">E-mail Адрес <span class="req">*</span></label>
+                <input type="email" name="email" id="email" class="txt" tabindex="4" placeholder=" address@mail.ru" required autocomplete="on">
+                @*<label for="MailToClient">Получить копию заказа</label>
+            <input id="MailToClient" type="checkbox" checked>*@
+                <input type="checkbox" name="MailToClient" id="MailToClient" class="css-checkbox" checked />
+                <label for="MailToClient" class="css-label">Получить копию заказа</label>
+            </div>
+
+            <div class="row">
+                <label for="recipient-phone">Ваш телефон: <span class="req">*</span></label>
+                <input type="text" name="phone" id="recipient-phone" tabindex="5" class="txt" placeholder="+3" required autocomplete="on">
+            </div>
+
+            <div class="row">
+                <label class="ss" for="message">Дополнительная информация / Вопросы <span class="req">*</span></label>
+                <textarea name="message" id="message" class="txtarea" tabindex="6" required></textarea>
+            </div>
+
+            <div class="row">
+                <img src='@Url.Action("Captcha", "Basket")' alt='captcha' />
+                <span class="req">*</span>
+                <input type="number" name="capcha" id="capcha" oninput="maxLengthCheck(this)" maxlength = "4" class="txt" tabindex="7" placeholder="Код с картинки" required autocomplete="on" min="1000" max="9999">
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="modalConfirn btn btn-5" tabindex="7" id="modalConfirn"><h3>Подтвердить заказ</h3></button>
+        </div>
+    </div>
+
+</div>
+@*<h3> Ваша корзина (не юз рес)</h3>*@
+<h3> Ваша корзина</h3>
+@{if (ViewBag.ListProduct != null)
+    {
+        <ul class="list-group">
+            @foreach (var it in ViewBag.ListProduct)
+            {
+                <li class="list-group-item"><span class="mark">@it.ShortName-@it.Marks</span> - <span class="price">@it.Price.ToString("0.00")</span> грн. <button class="badge remove">ss</button> <span class="badge">Всего : <input class="total" type="text" disabled />  @*<span class="total"></span>*@ </span> <button class="badge countAdd">&gt;</button> <textarea class="badge count">@it.Count</textarea> <button class="badge countRemove">&lt;</button> </li>
+            }
+            @* автоматом подгоняет  значок валюты  под культуру если не указывать явно *@
+            @*@String.Format(System.Globalization.CultureInfo.CreateSpecificCulture("uk"), "{0:C2}", @it.Price)*@
+        </ul>
+    }
+}
+<div class="lastRow">
+    <span class="TotalText"> К оплате : </span>
+    <input class="TOTAL" type="text" disabled />
+</div>
+<div class="success">
+    <button id="confirnOrder" type="button" class="btn btn-success" onclick="ConfirnOrder()" style=" margin:10px;width:25rem;height:5rem;font-size:1.6rem;font-style:oblique;">
+        Подтвердить заказ
+    </button>
+</div>
+
+
+<script src="~/Scripts/_Basket.js"></script>
+

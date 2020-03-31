@@ -1,0 +1,20 @@
+﻿
+<table class="Price-Details-table">
+    <tbody>
+
+        @for (var i = 0; i < @ViewBag.ListMarks.Count; i++)
+        {
+            <tr>
+                <td class="Price-Details-firstCell">@ViewBag.ListMarks[i]</td>
+                <td class="Price-Details-priceCell">@ViewBag.ListPrice[i]</td>
+                <td class="Price-Details-orderCell">
+                  @*  @Html.ActionLink("Move", "MoveReport", "ReportsWeb", new { id = item.ReportDefinitionId, newReport = false }, new { @class = "move-modal" })*@
+                    @Html.ActionLink(linkText: "ЗАКАЗАТЬ", actionName: "Products", controllerName: "Basket", routeValues: new { Mark = ViewBag.ListMarks[i], Price = ViewBag.ListPrice[i] }, htmlAttributes: null)
+                    @*@Html.ActionLink(linkText: "ЗАКАЗАТЬ", actionName: "Basket", controllerName: "Basket")*@
+                    @*,routeValues: new { DetailName = _DetailName }, htmlAttributes: null)*@
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

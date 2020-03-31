@@ -1,0 +1,31 @@
+﻿@helper AL(string text, string action, string controller, string _CategoryName = "Расширяемые ПР")
+{
+    /**/
+    @Html.ActionLink(linkText: text, actionName: action, controllerName: controller,
+    routeValues: new { CategoryName = _CategoryName  }, htmlAttributes: null)
+}
+@helper AL_Details(string text, string action, string controller, string _DetailName = "ПР200", string imgSource = null, string cost = null, object attr = null)
+{
+    /**/
+    @Html.ActionLink(linkText: text, actionName: action, controllerName: controller,
+    routeValues: new { DetailName = _DetailName }, htmlAttributes: null)
+}
+<h3>    @AL("Расширяемые ПР", "Category", "Catalog", "Расширяемые ПР")</h3>
+<ul>
+    <li>@AL_Details("ПР200", "Details", "Catalog", "ПР200")</li>
+</ul>
+<h3>    @AL("Модули расширения для ПР", "Category", "Catalog", "Модули расширения для ПР")    </h3>
+<ul class="list-group">
+    <li><a class="text-dark" href="#патом">ПРМ</a></li>
+</ul>
+<h3>    @AL("Моноблочные ПР", "Category", "Catalog", "Моноблочные ПР")    </h3>
+<ul class="list-group">
+    <li><a class="text-dark" href="#патом">ПР110</a></li>
+    <li><a class="text-dark" href="#патом">ПР114</a></li>
+</ul>
+<h3>    @AL("Аксессуары", "Category", "Catalog", "Аксессуары")    </h3>
+<ul class="list-group">
+    <li><a class="text-dark" href="#патом">ПР-ИП485</a></li>
+    <li><a class="text-dark" href="#патом">ПР-МИ485</a></li>
+    <li><a class="text-dark" href="#патом">ПР-КП</a></li>
+</ul>

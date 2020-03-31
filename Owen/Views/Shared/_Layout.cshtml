@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @ViewBag.App_name</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Styles/MainLayout.css" rel="stylesheet" />
+    <script src="~/Scripts/_OnLoad_RegisterMenu.js"></script>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+            @*<div class="navbar fixed-top" style="background-color:black; top:0;"> *@
+            <div class="container">
+                <!-- #region above main menu -->
+                <div class="navbar-collapse collapse low">
+                    <ul class="nav navbar-nav" role="menu">
+                        <li>
+                            <span class="liaboveMenu">
+                                @L_Resources.LocolizationResource.phone:  @L_Resources.LocolizationResource.phoneNumber
+                            </span>
+                        </li>
+                        <li>
+                            <span class="liaboveMenu">
+                                E-mail: @L_Resources.LocolizationResource.Email
+                            </span>
+                        </li>
+                        <li>
+                            <span class="liaboveMenu">
+                                Адрес: @L_Resources.LocolizationResource.Email
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav" style="float: right;" role="menu">
+                        <li class="localizationButtons">
+                            @Html.ActionLink(linkText: "RU", actionName: "ChangeCulture", controllerName: "Localization",
+                    routeValues: new { lang = "ru" }, htmlAttributes: null)
+                        </li>
+                        <li class="localizationButtons">
+                            @Html.ActionLink(linkText: "UA", actionName: "ChangeCulture", controllerName: "Localization",
+                                        routeValues: new { lang = "uk" }, htmlAttributes: null)
+                        </li>
+                    </ul>
+                </div>
+                <!-- #endregion -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-nav" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink(@L_Resources.LocolizationResource.LOGO, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a>@L_Resources.LocolizationResource.aboutCompany &#9660;</a>
+                            <ul class="nav navbar-nav" role="menu">
+                                <li>@Html.ActionLink(@L_Resources.LocolizationResource.aboutCompany_Contacts, "Contact", "Home")</li>
+                                <li>@Html.ActionLink(@L_Resources.LocolizationResource.aboutCompany_news, "Projects", "Home")</li>
+                                <li>@Html.ActionLink(@L_Resources.LocolizationResource.aboutCompany_shareAction, "Projects", "Home")</li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink(@L_Resources.LocolizationResource.Catalog, "Catalog", "Home")</li>
+                        <li>@Html.ActionLink(@L_Resources.LocolizationResource.paymentDeliver, "InfoPaymentDelivery", "Home")</li>
+                        <li>
+                            <a>@L_Resources.LocolizationResource.support &#9660;</a>
+                            <ul class="nav navbar-nav" role="menu">
+                                <li>@Html.ActionLink(@L_Resources.LocolizationResource.support_projHelper, "Projects", "Home")</li>
+                                <li>@Html.ActionLink(@L_Resources.LocolizationResource.support_documentation, "Projects", "Home")</li>
+                                <li>@Html.ActionLink(@L_Resources.LocolizationResource.support_serteficate, "Certifications", "Home")</li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink(@L_Resources.LocolizationResource.partners, "Projects", "Home")</li>
+                        <li>@Html.ActionLink(@L_Resources.LocolizationResource.projectCatalog, "Projects", "Home")</li>
+                    </ul>
+                    <ul class="nav navbar-nav" style="float: right;" role="menu">
+                        @*https://metanit.com/sharp/mvc/16.1.php*@
+                        @*https://dotnetfiddle.net/e1BX7M*@
+                        <li>
+                            <span class="fa-stack fa-2x has-badge" id="BASKET"  data-count="0">
+                                <a href="/Basket/Products">
+                                    <i style="" class="fa fa-shopping-cart fa-stack-2x red-cart"></i>
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    <div class="container body-content" style="height:3.5rem;">
+        <button onclick="topFunction()" id="scrollArrow" title="Go to top"><i class="fas fa-var-caret-square-up"></i></button>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <div>
+                <a title="WhatsApp" href="whatsapp://send?phone=+380668205409">  <img src="~/CustomIcons/Footer/whatsapp-logo-variant.png" alt="whatsapp" /></a>
+                <a id="vb_pk" title="Viber" href="viber://chat?number=+380668205409"> <img src="~/CustomIcons/Footer/viber.png" alt="Viber" /></a>
+                <a id="vb_mb" title="Viber" href="viber://add?number=380668205409"> <img src="~/CustomIcons/Footer/viber.png" alt="Viber" /></a>
+                <a title="Telegram" href="tg://resolve?domain=Yaryi007"> <img src="~/CustomIcons/Footer/telegram.png" alt="Telegram" />  </a>
+                <a href="skype:nikname?chat">  <img class="footor-society-images" src="~/CustomIcons/Footer/skype.png" alt="skype" /> </a>
+               @* типо сразу  писать  письмо  на нашу  почту и моно шаблон  добавить
+                   https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=target@email.com&subject=MISSED%20CALL%20EZTRADER&body=Hello%2C%0A%0AI%20tried%20contacting%20you%20today%20but%20you%20seem%20to%20have%20missed%20my%20call.%20%0A%0APlease%20return%20my%20call%20as%20soon%20as%20you%E2%80%99re%20available.%20%0A%0AIn%20any%20case%2C%20I%20will%20try%20ringing%20you%20at%20a%20later%20time.%0A%0A%0ATy%2C%0A%0A%0A%0A
+                   *@
+            </div>
+            <p>&copy; @DateTime.Now.Year - Created by UFO</p>
+            @*<div>
+            @Html.ActionLink("Скачать ZIP", "DownloadFiles", "Product", routeValues: new { fileName = "setup_tpm101_tpm2xx_3.0.5", fileExtention = ".zip" }, htmlAttributes: null)
+            @Html.ActionLink("Ск PDF", "DownloadFiles", "Product", routeValues: new { fileName = "re_oven_trm200_0034_ua", fileExtention = ".pdf" }, htmlAttributes: null)
+        </div>*@
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

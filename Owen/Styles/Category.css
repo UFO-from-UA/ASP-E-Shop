@@ -1,0 +1,56 @@
+﻿a:hover {
+    text-decoration: none;
+}
+a div.card-body span, a div.card-body h5.card-title {
+    color: black;
+}
+a div.card-body h5.card-title span {
+    font-size: x-large;
+    color: red;
+}
+a div.card-body {
+    font-size: 120%;
+    font-style: oblique;
+}
+
+.card {
+    cursor: pointer;
+    width: 25rem;
+}
+rder-style: dotted;
+}
+.card-hov {
+    border: 3px solid red;
+    text-align: center;
+    -webkit-perspective: 100px;
+    perspective: 100px;
+}
+.card-hov:hover {
+        -webkit-animation-name: card-hov;
+        animation-name: card-hov;
+        /*border-style: ridge;*/
+        box-sizing: padding-box;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+@keyframes card-hov {
+    0% {
+        box-shadow: 0px 0px 10px #3a0055;
+        /*border-style: inset;*/
+        /*opacity: .5;*/
+    }
+
+    50% {
+        box-shadow: 0px 0px 30px #0b0094;
+        /*opacity: 1;*/
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px #3a0055;
+        /*opacity: .5;*/
+    }
+}

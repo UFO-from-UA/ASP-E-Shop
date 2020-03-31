@@ -1,0 +1,87 @@
+﻿div.DetailsHeaderBlock {
+    display:block;
+}
+.container.body-content div.row.row-1 {
+    padding-bottom: 2rem;
+}
+    .container.body-content div.row.row-1 img {
+        width: 26rem;
+    }
+    .container.body-content div.row.row-1 h5 span {
+       font-size:1.2em;
+       color:red;
+    }
+li.list-group-item:hover {
+    color: aliceblue;
+}
+ul.list-group li:hover {
+    color: white;
+    background-color:black;
+}
+/*Таблицы в паршал виев*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+.InfoDetailsTableCells tr td {
+    border: 1px solid #000;
+}
+tr:nth-child(odd) {
+    background-color: #cdcfcc;
+}
+tr:nth-child(even) {
+    background-color: #f2f5f0;
+}
+/*Таблицы в паршал виев*/
+/*===============================*/
+
+/*ОL LI в паршал виев*/
+.main_category li, ol li {
+    float: none;
+    font-size: 1.5rem;
+}
+div#main_category.col-md-8.main_category ol li:hover {
+    background: none;
+}
+/*ОL LI в паршал виев*/
+/*===============================*/
+
+/*UL LI в паршал виев*/
+.main_category ul li,.main_category ul {
+    background: none;
+}
+/*UL LI в паршал виев*/
+/*===============================*/
+
+/*Table в паршал виев for Price*/
+.main_category table.Price-Details-table {
+    border: 1px solid #000;
+    background:#808080;
+}
+.main_category table.Price-Details-table tbody tr {
+        /*background: #cdcfcc;*/
+        border-bottom: 1px solid #000;
+}
+ .main_category table.Price-Details-table tbody tr td.Price-Details-orderCell {
+        border: 1px solid #000;
+        text-align:center;
+ }
+.main_category table.Price-Details-table tbody tr td.Price-Details-priceCell {
+        text-align: right;
+}
+/*Table в паршал виев for Price*/
+/*===============================*/
+
+/*Table td img в паршал виев*/
+/*.main_category table.InfoDetailsTableCells*/
+tbody tr td {
+    text-align: center;
+    align-content: center;
+}
+/*Table td img в паршал виев */
+/*===============================*/

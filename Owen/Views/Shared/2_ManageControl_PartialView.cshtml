@@ -1,0 +1,32 @@
+﻿@helper AL(string text, string action, string controller, string _CategoryName = "Таймеры")
+{
+    @Html.ActionLink(linkText: text, actionName: action, controllerName: controller,
+    routeValues: new { CategoryName = _CategoryName  }, htmlAttributes: null)
+}
+@helper AL_Details(string text, string action, string controller, string _DetailName = "УТ1", string imgSource = null, string cost = null, object attr = null)
+{
+    @Html.ActionLink(linkText: text, actionName: action, controllerName: controller,
+    routeValues: new { DetailName = _DetailName }, htmlAttributes: null)
+}
+<h3>    @AL("Таймеры", "Category", "Catalog", "Таймеры")</h3>
+<ul>
+    <li>@AL_Details("УТ1", "Details", "Catalog", "УТ1")</li>
+    <li>@AL_Details("СВ01", "Details", "Catalog", "СВ01")</li>
+    <li>@AL_Details("УТ24", "Details", "Catalog", "УТ24")</li>
+</ul>
+<h3>    @AL("Счетчики импульсов", "Category", "Catalog", "Счетчики импульсов")    </h3>
+<ul class="list-group">
+    <li><a class="text-dark" href="#патом">СИ8</a></li>
+    <li><a class="text-dark" href="#патом">СИ10</a></li>
+    <li><a class="text-dark" href="#патом">СИ20</a></li>
+    <li><a class="text-dark" href="#патом">СИ30</a></li>
+</ul>
+<h3>    @AL("Тахометры", "Category", "Catalog", "Тахометры")    </h3>
+<ul class="list-group">
+    <li><a class="text-dark" href="#патом">ТХ01</a></li>
+</ul>
+<h3>    @AL("Задающие устройства", "Category", "Catalog", "Задающие устройства")    </h3>
+<ul class="list-group">
+    <li><a class="text-dark" href="#патом">РЗУ-420</a></li>
+    <li><a class="text-dark" href="#патом">УЗС1</a></li>
+</ul>

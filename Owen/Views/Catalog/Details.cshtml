@@ -1,0 +1,29 @@
+﻿
+@using System.Linq
+<script src="~/Scripts/CatalogJS.js"></script>
+<link href="~/Styles/Details.css" rel="stylesheet" />
+
+<div class="row row-1" >
+    <div class="col-md-3">
+        <img src="@ViewBag.Product.ImgSource" alt="@ViewBag.Product.Name" />
+    </div>
+    <div class="col-md-9">
+        <h3>@ViewBag.Product.Name</h3>
+        <h5 class="card-title">Стоимость от <span> @ViewBag.Product.Price.ToString("0") </span> грн. ( зависит от модификации )</h5>
+        <p> @ViewBag.Product.Details</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <ul class="list-group">
+            @foreach (var key in ViewBag.Product.ListMenu)
+            {
+                <li class="list-group-item" onclick="DetailsClick_LoadPartial(this)"  data-mainGroup="@key">@key</li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-md-8 main_category" id="main_category">
+       @Html.Raw(@ViewBag.Product.ListInfo[0])
+    </div>
+</div>    

@@ -1,0 +1,224 @@
+﻿.navbar.navbar-inverse.navbar-fixed-top a, .navbar.navbar-inverse.navbar-fixed-top span {
+    font-family: Georgia, serif;
+    /*font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;*/
+    /*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
+    font-style: oblique;
+}
+.navbar.navbar-inverse.navbar-fixed-top #BASKET  {
+    /*font-family: Arial, Helvetica, Geneva, sans-serif;
+    font-style: normal;*/
+}
+.selectedLang{
+    font-weight:900;
+}
+.selectedLang a{
+    color:white !important;
+}
+.elem-hoover {
+    background-color: dimgray;
+}
+ul.dropdown-menu-support li{
+    color:grey;
+}
+
+ul.dropdown-menu-support li:hover {
+    color: white;
+}
+.main_category ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+.main_category li {
+    float: left;
+}
+.main_category li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+}
+.main_category li a:hover {
+background-color: #111111;
+ }
+h3 a {
+    color: #333333;
+}
+
+/* DROPDAWN
+    /*https://css-tricks.com/solved-with-css-dropdown-menus/
+    /*div.navbar-collapse.collapse ul.nav.navbar-nav li ul.dropdown*/
+    li: hover {
+    background: #111111;
+    cursor: pointer;
+}
+ul li ul {
+    background: #333333;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    width: 25rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 0;
+    left: 0;
+    display: none;
+}
+    ul li:hover > ul,
+    ul li:focus-within > ul, /* this is the line we add */
+    ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    ul li ul li {
+        clear: both;
+        width: 100%;
+    }
+/* DROPDAWN  __________________________________________________________________________*/
+
+
+/* Basket  _________https://codepen.io/chcculle/pen/qPrWBK__________________________________________*/
+.fa-stack[data-count]:after {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    content: attr(data-count);
+    font-size: 40%;
+    padding: .6em;
+    border-radius: 999px;
+    line-height: .75em;
+    color: white;
+    color: grey;
+    text-align: center;
+    min-width: 1em;
+    background: white;
+    font-weight: bold;
+    /*background: #00ff21;*/
+    /*color: #DF0000;*/
+    border-style: solid;
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+    font-style: normal;
+}
+.fa-circle {
+    color: #DF0000;
+}
+.fa-2x {
+    font-size: 1.6em;
+}
+.red-cart {
+    /*color: #0027b3;*/
+    /*color: dimgray;*/
+    color: white;
+    background: unset;
+}
+/* Basket  ________________________________________________________________________*/
+    div .navbar-collapse.collapse ul.nav.navbar-nav li span.liaboveMenu {
+    color: white;
+    margin: 10px 30px 5px 5px;
+    display:block;
+    font-size: 1.2rem;
+}
+div.navbar-collapse collapse low ul.nav.navbar-nav li:hover  {
+    background-color: inherit;
+}
+div.navbar-collapse.collapse.low {
+    padding: 0 0 0 0;
+}
+div.navbar-collapse.collapse ul.nav.navbar-nav li.localizationButtons a {
+    height: 10px;
+    line-height: 1px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/*Button to top*/
+#scrollArrow {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    background-color: black;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    color: white;
+    cursor: pointer;
+    padding: 4px 10px 5px 10px;
+    border-radius: 50%;
+}
+#scrollArrow::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        color: #fff;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.2em;
+        line-height: 30px;
+        /*color: #0027b3;
+        transition: color .5s, opacity .5s, visibility .5s;*/
+    }
+#scrollArrow:hover {
+        background-color: #555;
+    }
+/*Button to top*/
+/*===============================*/
+
+body {
+    background-color: #e4dcdc;
+}
+div.Contact {
+    margin-top: 2em;
+    /*text-align: center;*/
+    align-content: center;
+    font-size: 1.6em;
+    color: black;
+}
+
+div.Contact a {
+    color: inherit;
+}
+
+div.paymant ul li:hover, div.paymant ol li:hover {
+    background: none;
+    cursor: auto;
+}
+/*a img.footor-society-images, a {//все л омает и не  помню чё это
+    max-width: 5rem;
+    max-height: 5rem;
+}*/
+
+/*Footor Button society*/
+#vb_mb {
+    display: none
+}
+@media (max-width:1024px) {
+    #vb_pk {
+        display: none
+    }
+    #vb_mb {
+        display: block
+    }
+}
+footer div a img {
+    width:3rem;
+    height:3rem;
+    margin: 0.25rem;
+}
+footer div {
+    /*margin: 1rem 50% 1rem 50%;*/
+    margin: 1rem auto;
+    width: 16rem;
+}
+/*Footor Button society*/
+/*===============================*/
+
+
+

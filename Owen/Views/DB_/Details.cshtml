@@ -1,0 +1,74 @@
+﻿@model Owen.DataBase.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Category.CategoryName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Category.CategoryName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Details.MainInfo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Details.MainInfo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MainCategory.MainCategoryName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MainCategory.MainCategoryName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ShortName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ShortName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ImgSource)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ImgSource)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<link href="~/Styles/Category.css" rel="stylesheet" />
+<h3>@ViewBag.Title</h3>
+@foreach (var it in ViewBag.CategoryListItems)
+{
+    <div class="col-md-4">
+        <div class="card border-primary text-white bg-dark mb-3 text-center">
+            <div class="hov">
+                <div class="card-hov">
+                    <a href="/Catalog/Details?DetailName=@it.ShortName">
+                        <img style="width: 25rem;" class="card-img-top" src="@it.ImgSource" alt="@it.Name">
+                    </a>
+                    <a href="/Catalog/Details?DetailName=@it.ShortName">
+                        <div class="card-body">
+                            <span>@it.Name</span>
+                            <h5 class="card-title">Стоимость от <span> @it.Price.ToString("0") грн. </span> <br> ( зависит от модификации )</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
